@@ -1,0 +1,109 @@
+/* 🌈 Background animation */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #6366f1, #06b6d4, #10b981, #f59e0b);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #4f46e5;
+}
+
+.header nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.header nav a:hover {
+  color: #4f46e5;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder {
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer .highlight {
+  color: #4f46e5;
+  font-weight: bold;
+}
+/* Row container */
+.content-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Upload card (left side) */
+.upload-card {
+  flex: 0 0 300px; /* fixed width */
+}
+
+/* Visualization area (right side) */
+.visualization-card {
+  flex: 1; /* take the rest of the space */
+}
